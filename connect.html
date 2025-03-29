@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="connect.css">
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById('first-name').value;
+            const namePattern = /^[a-zA-Z]{1,30}$/;
+            if (!namePattern.test(firstName)) {
+                alert('First Name must be alphabets only and up to 30 characters.');
+                return false;
+            }
+            const lastName = document.getElementById('last-name').value;
+            if (!namePattern.test(lastName)) {
+                alert('Last Name must be alphabets only and up to 30 characters.');
+                return false;
+            }
+
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            const phone = document.getElementById('phone').value;
+            const phonePattern = /^[0-9-]+$/;
+            if (!phonePattern.test(phone)) {
+                alert('Phone Number must be numbers and hyphens only.');
+                return false;
+            }
+
+            // Company Name Validation
+            const company = document.getElementById('company').value;
+            const companyPattern = /^[a-zA-Z0-9 ]{1,20}$/;
+            if (!companyPattern.test(company)) {
+                alert('Company Name must be alphabets and numbers only, up to 20 characters.');
+                return false;
+            }
+
+            // Job Title Validation
+            const jobTitle = document.getElementById('job-title').value;
+            if (!namePattern.test(jobTitle) || jobTitle.length > 20) {
+                alert('Job Title must be alphabets only and up to 20 characters.');
+                return false;
+            }
+
+            // Message Validation
+            const message = document.getElementById('message').value;
+            if (message.length > 200) {
+                alert('Message must be up to 200 characters.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <img class="logo" src="path/to/logo.png" alt="Logo">
+        <nav>
+            <a href="homep.html">Home</a>
+            <a href="whovr.html">Who We Are</a>
+            <a href="whatvdo.html">What We Do</a>
+            <a href="#insights" id="insights-link">Insights</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="left-section">
+                <h2>Connect with Us</h2>
+                <p>Whether you have a specific goal or challenge in mind or want to discuss big-picture ideas for your organization, our team is here to provide insight, support, and guidance every step of the way. Please complete this form to connect with the right team member to assist you.</p>
+            </div>
+            <div class="right-section">
+                <form onsubmit="return validateForm()">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="purpose">Please Select</label>
+                            <select id="purpose" name="purpose">
+                                <option value="">Please Select</option>
+                                <option value="solutions">I am inquiring about your solutions</option>
+                                <option value="support">I need customer support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="job-title">Job Title</label>
+                            <input type="text" id="job-title" name="job-title">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Region</label>
+                            <input type="text" id="state" name="state">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Let us know how can we help...</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer-section">
+        <div class="footer-content">
+            <h4>2024 Page1Systems LLP. ALL COPYRIGHTS RESERVED </h4>
+        </div>
+    </div>
+    <!-- Insights Template -->
+    <div id="insights-template" class="insights-template">
+        <div class="insights-content">
+            <span id="close-insights" class="close-insights">&times;</span>
+            <h2>INSIGHTS</h2>
+            <h3>SERVICES</h3>
+            <div id="insights1" class="insightnav1">
+            <a href="whatvdo.html">Software Services</a><br>
+            <a href="whatvdo.html">Cyber security Services</a><br>
+            <a href="whatvdo.html">IT Consulting</a><br>
+            <a href="whatvdo.html">Managed IT Services</a><br>
+            <a href="whatvdo.html">IT Support Services</a>
+        </div>
+        <div id="insights2" class="insightnav2">
+            <a href="whatvdo.html">Data Services</a><br>
+            <a href="whatvdo.html">Network Services</a><br>
+            <a href="whatvdo.html">Hardware Services</a><br>
+            <a href="whatvdo.html">Digital Marketing Services</a>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Page 1 Systems</title>
+    <link rel="stylesheet" href="whovr.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img class="logo" src="path/to/logo.png" alt="Logo">
+        <nav>
+            <a href="homep.html">Home</a>
+            <a href="whatvdo.html">What We Do</a>
+            <a href="#" id="insights-link">Insights</a>
+            <a href="connect.html" class="connect-link">
+                <button class="connect-button">Let's Connect</button>
+            </a>
+        </nav>
+    </div>
+    <div class="section1">
+        <div class="section1-left" id="welcome">
+            <h1>Welcome to <br> Page 1 Systems<br></h1>
+            <p>We believe in transforming <br> technology into a powerful business asset.</p>
+            <div class="section1-right">
+            </div>
+        </div>
+        <video id="background-video"  autoplay muted>
+            <source src="https://cdn.pixabay.com/video/2020/08/03/46284-446732347_tiny.mp4" type="video/mp4">
+        </video>
+        <div class="circle-container">
+            <div class="circle-content">
+                <p>As a proud member of a dynamic group <br>that includes Quantum Cellar Technologies<br> and Cloudosmo Solutions LLP,<br> we are dedicated to providing<br>top-tier software and consulting services<br>that empower your business <br>to thrive in the digital age.</p>
+            </div>
+        </div>
+    </div> 
+        
+        <div class="section" id="mission">
+            <div class="section-miss">
+            <h2>Our Mission</h2>
+            <p>Our mission is to deliver high-quality, reliable, and cost-effective IT solutions tailored to meet your unique needs.<br> We are committed to fostering long-term relationships with our clients by providing transparent, trustworthy, and efficient services.</p>
+        </div>
+        <div class="section-com">
+            <h2>Our Commitment</h2>
+            <p>At Page 1 Systems, integrity and trust are the cornerstones of our business. We strive to build strong, lasting partnerships with our clients by consistently delivering outstanding results and unparalleled customer service.</p>
+            </div>
+    </div>
+
+    <div class="section-back" id="why-choose-us">
+        <div class="section-conten">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li><strong>Quality Services:</strong> We are dedicated to delivering solutions that exceed your expectations and drive your business forward.</li>
+            <li><strong>Transparent Pricing:</strong> We offer estimated prices with no hidden costs, ensuring you have complete clarity and control over your investment.</li>
+            <li><strong>Client-Centric Approach:</strong> Your success is our priority. We tailor our services to align perfectly with your business goals and needs.</li>
+            <li><strong>Expert Team:</strong> Our team of experienced professionals brings deep expertise and a commitment to excellence in every project.</li>
+        </ul>
+    </div>
+</div>
+        
+        <div class="section-what" id="services">
+            <div class="section-content-what">
+            <div class="section-content-what1">
+            <h2>What We Do</h2>
+            <ul>
+                <li>Managed IT Services</li>
+                <li>Cybersecurity Services</li>
+                <li>Software Development</li>
+                <li>IT Consulting</li>
+                <li>Data Services</li>
+            </ul>
+        </div>
+            <div class="section-content-what2">
+            <ul>
+                <li>IT Support Services</li>
+                <li>Network Services</li>
+                <li>Hardware Services</li>
+                <li>Digital Marketing Services</li>
+            </ul>
+        </div>
+            <div class="read-more-button1">
+                <a href="whatvdo.html">Know More</a>
+            </div>
+        </div>
+    </div>
+        
+        <div class="section-jon" id="join-us">
+            <h2>Join Us on the Journey</h2>
+            <p>Embark on a journey of growth and innovation with Page 1 Systems. Let us help you harness the power of technology to achieve your business goals.</p>
+            <div class="read-more-button2">
+                <a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+        
+
+    <div id="footer" class="footer-section">
+        <div class="footer-content">
+            <h4>2024 Page1Systems LLP. ALL COPYRIGHTS RESERVED</h4>
+        </div>
+    </div>
+    
+    <div id="insights-template" class="insights-template">
+        <div class="insights-content">
+            <span id="close-insights" class="close-insights">&times;</span>
+            <h2>INSIGHTS</h2>
+            <h3>SERVICES</h3>
+            <div id="insights1" class="insightnav1">
+            <a href="whatvdo.html">Software Services</a><br>
+            <a href="whatvdo.html">Cyber security Services</a><br>
+            <a href="whatvdo.html">IT Consulting</a><br>
+            <a href="whatvdo.html">Managed IT Services</a><br>
+            <a href="whatvdo.html">IT Support Services</a>
+        </div>
+        <div id="insights2" class="insightnav2">
+            <a href="whatvdo.html">Data Services</a><br>
+            <a href="whatvdo.html">Network Services</a><br>
+            <a href="whatvdo.html">Hardware Services</a><br>
+            <a href="whatvdo.html">Digital Marketing Services</a>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById("background-video");
+    var playCount = 0;
+
+    video.addEventListener('ended', function() {
+        playCount++;
+        if (playCount <1) {
+            video.currentTime = 0;  // Reset to the start
+            video.play();  // Play again
+        }
+    });
+});
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var insightsLink = document.getElementById("insights-link");
+        var insightsTemplate = document.getElementById("insights-template");
+        var closeInsights = document.getElementById("close-insights");
+    
+        insightsLink.addEventListener("click", function(event) {
+            event.preventDefault();  // Prevent the default action of the anchor tag
+            insightsTemplate.style.display = "block";
+        });
+    
+        closeInsights.addEventListener("click", function() {
+            insightsTemplate.style.display = "none";
+        });
+    
+        window.addEventListener("click", function(event) {
+            if (event.target === insightsTemplate) {
+                insightsTemplate.style.display = "none";
+            }
+        });
+    });
+</script>
+    
+</body>
+</html>

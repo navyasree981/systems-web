@@ -1,0 +1,267 @@
+body {
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url('https://t4.ftcdn.net/jpg/07/30/32/57/240_F_730325705_VTbHZSHod4H00jXh6S9sgfANhCqNLtuU.jpg') no-repeat center center/cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    font-family: 'Saint Regus', sans-serif;
+    font-weight: 700;
+    color: rgb(1, 1, 15);
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.navbar .logo {
+    height: 20px;
+    margin-left: 20px; /* Adjusted to avoid excessive right margin */
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px; /* Adjusted for better spacing */
+    font-family: 'Saint Regus', sans-serif;
+    font-weight: 700;
+    color: rgb(1, 1, 16);
+    background-color: white;
+    margin-left:530px;
+    position: fixed;
+}
+
+.navbar nav a {
+    color: #000; /* Solid black color */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 10px;
+    position: relative;
+    font-family: 'Saint Regus', sans-serif;
+    font-weight: 700;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar nav a:hover {
+    transform: scale(1.11);
+}
+
+/* Insights Template Styles */
+.insights-template {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    width: 100%;
+    height: 100vh;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(2, 1, 15, 0.4); /* Fallback color */
+    background-color: rgba(2, 1, 15, 0.4); /* Black w/ opacity */
+}
+
+.insights-content {
+    font-family:'Arial', 'sans-serif';
+    margin-top:50px;
+    background-color: #001428;
+    width: 100%; /* Could be more or less, depending on screen size */
+    height: 60vh;
+    color: whitesmoke;
+}
+
+.insightnav1 {
+    font-family:'Arial', 'sans-serif';
+    width: 50%;
+    margin-left:40px;
+    height: 50px;
+    padding:10px;
+    font-weight:500px;
+}
+
+.insightnav2 {
+    font-family:'Arial', 'sans-serif';
+    margin-left: 50%;
+    margin-top:-70px;
+    padding:10px;
+    font-weight:500px;
+}
+
+.insights-content h2{
+    font-family:'Arial', 'sans-serif';
+    font-size: 40px;
+    padding: 30px;
+    margin-top:0px;
+}
+
+.insights-content h3{
+    font-family:'Arial', 'sans-serif';
+    margin-left:50px;
+    font-size:30px;
+    margin-top:-30px;
+}
+
+.insights-content a{
+    font-family:'Arial', 'sans-serif';
+    font-size: 20px;
+    color: whitesmoke;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.insights-content a:hover{
+    font-size: 20px;
+    color: whitesmoke;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.close-insights {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-insights:hover,
+.close-insights:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 60px; /* Adjusted from 30px to 50px to create space for the navbar */ /* Added margin to create space between form and footer */
+    width: 80%;
+    background: url('https://t4.ftcdn.net/jpg/08/55/89/81/240_F_855898145_3e92WRYSjdJVYq3p62AwcY1B8acnDre7.jpg') no-repeat center center/cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex: 1; 
+    margin-bottom:10px;/* Add padding inside the container for better spacing */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+}
+
+.left-section, .right-section {
+    padding:20px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.left-section {
+
+    background-color: rgba(241, 241, 241, 0.8);
+}
+
+.right-section {
+    background-color: rgba(241, 241, 241, 0.8);
+}
+
+h2 {
+    margin-top: 100px;
+    font-size: 40px;
+    margin-left:20px;
+    
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-left:20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select, textarea {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+form button[type="submit"] {
+    margin-left: 140px;
+    background-color: #000; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    border: none; /* Remove the default border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    width: 150px; /* Set the width to your preference */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+    border: 2px solid #000; /* Add border on hover */
+}
+
+.footer-section {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    position: relative; /* Ensure it stays at the bottom */
+    align-content: center;
+}
+
+.footer-content {
+    font-size: 12px;
+    font-family: 'Arial', 'sansarif';
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+}

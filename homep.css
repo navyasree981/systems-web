@@ -1,0 +1,508 @@
+@font-face {
+    font-family: 'Saint Regus';
+    src: url('fonts/SaintRegus-Medium.woff2') format('woff2'),
+         url('fonts/SaintRegus-Medium.woff') format('woff');
+    font-weight: 500; /* medium weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saint Regus';
+    src: url('fonts/SaintRegus-Bold.woff2') format('woff2'),
+         url('fonts/SaintRegus-Bold.woff') format('woff');
+    font-weight: 700; /* bold weight */
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.navbar {
+    overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    font-family: 'Saint Regus', sans-serif;
+    font-weight: 700; /* bold weight */
+    color: rgb(1, 1, 15);
+    margin-top: 0px;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.navbar .logo {
+    display:flex;
+    height: 20px;
+    margin-left: 0px; 
+}
+
+.navbar nav {
+    display: flex;
+    gap: 0px;
+    font-family: 'Saint Regus', sans-serif;
+    font-weight: 700; /* bold weight */
+    color: rgb(1, 1, 16);
+    background-color: white;
+    margin-bottom: -5px;
+}
+
+.navbar nav a {
+    display:flex;
+    color: rgb(2, 2, 22);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 13px;
+    position: relative;
+    font-family: 'Saint Regus', sans-serif;
+    font-weight: 700; /* bold weight */
+    background-color: white;
+    margin-right:20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar nav a:hover {
+    transform: scale(1.1); /* Adjust the scale factor to increase the size to 20px */
+}
+
+.connect-link {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    margin-bottom: -5px; /* Adjust this value to move the button up or down */
+}
+
+.connect-button {
+    display:flex;
+    background-color: black; /* Match the red color from the screenshot */
+    color: white;
+    border: 2px black;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 700; /* bold weight */
+    transition: background-color 0.3s ease;
+    margin-top: -5px;
+}
+
+.connect-button:hover {
+    background-color: white;
+    color: black ;/* Darker red for hover effect */
+    border: solid black;
+    font-size: 18px;
+}
+
+.slider {
+    display: flex;
+    width: 200%; /* Twice the width of a single slide */
+    transition: transform 2s ease-in-out;
+    margin-top: 30px; /* adjust as needed */
+    height:100vh;
+}
+
+.slide {
+    width: 50%; /* Half of the slider's width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    transition: transform 1s ease-in-out;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh; 
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.background-image {
+    background-size: cover;
+    background-position: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    z-index: -1; 
+}
+
+#slide1 .background-video {
+    background: url("https://videos.pexels.com/video-files/2818527/2818527-sd_640_360_24fps.mp4") no-repeat center center/cover;
+    animation: fadeIn 1s ease-in;
+}
+
+#slide2 .background-video {
+    background: url("https://pro-st.invideo.io/progressive/video?preset=sd240_mp4&key=216a251e-b80d-4a41-bf77-2061ad4cdc49/216a251e-b80d-4a41-bf77-2061ad4cdc49&bucket=iv-prod-pro-stocks&region=us-west-2") no-repeat center center fixed;
+    animation: fadeIn 1s ease-in;
+    background-size:cover;
+    height:100vh;
+    width:100%;
+    background-color: rgba(72, 68, 68, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(72, 68, 68, 0.4); 
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    margin-top: 0px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top : -40px;
+}
+
+.slide .discover-more-button a{
+    background-color: rgba(69, 66, 66, 0.0); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid white;
+    animation: fadeIn 2s ease-in;
+    text-decoration:none;
+}
+
+.slide .discover-more-button:hover a{
+    background-color: white;
+    color: black;
+}
+
+.read-more1-button a{
+    background-color: rgba(69, 66, 66, 0.0); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid white;
+    animation: fadeIn 2s ease-in;
+    text-decoration:none;
+}
+
+.read-more1-button:hover a{
+    background-color: white;
+    color: black;
+}
+
+
+.insights-template {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    width: 100%;
+    margin-top: 60px;
+    height: 100vh;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(2, 1, 15, 0.4); /* Fallback color */
+}
+
+.insights-content {
+    background-color: #001428;
+    width: 100%; /* Could be more or less, depending on screen size */
+    height: 65vh;
+    color: whitesmoke;
+}
+
+.insightnav1 {
+    width: 50%;
+    margin-left:20px;
+    height: 50px;
+    padding:10px;
+    font-weight:500px;
+}
+
+.insightnav2 {
+    margin-left: 50%;
+    margin-top:-70px;
+    padding:10px;
+    font-weight:500px;
+}
+
+.insights-content h2{
+    font-size: 40px;
+    padding: 30px;
+    margin-top:0px;
+}
+
+.insights-content h3{
+    margin-top:-20px;
+    margin-left:30px;
+}
+
+.insights-content a{
+    font-size: 20px;
+    color: whitesmoke;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.insights-content a:hover{
+    font-size: 20px;
+    color: whitesmoke;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.close-insights {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-insights:hover,
+.close-insights:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.intro-content {
+    padding:30px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+    border: 1px solid #ccc; /* Add border for each section */
+    box-sizing: border-box;
+    text-align: center; /* Center align text */
+}
+
+.intro-content h2 {
+    font-size: 40px; /* Adjust font size for a professional look */
+    margin-top: 30px;
+    font-weight: 700; /* Bold font for the heading */
+    color: black; /* Darker color for the heading */
+}
+
+.intro-content p {
+    font-size: 25px; /* Adjust font size for readability */
+    margin-top:-10px;
+    margin-bottom: 30px;
+    font-family: 'lato', 'sans-serif';
+    color: black; /* Subtle color for the paragraph text */
+    line-height: 1.6; /* Improved line height for better readability */
+    max-width: 100%; /* Max width for better content layout */
+}
+.whovr-button{
+    margin-bottom: 30px;
+    margin-top:20px;
+}
+.whovr-button a{
+    background-color: white; 
+    color: black;
+    padding: 15px 35px;
+    margin-bottom: 30px;
+    font-family: 'Saint Regus', 'sans-serif';
+    font-weight: 700;
+    font-size: 23px;
+    text-decoration:none;
+    cursor: pointer;
+    margin-top: 5px;
+    animation: fadeIn 1s ease-in;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.whovr-button:hover a{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+.showcase-section {
+    display: flex;
+    height: 700px;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #ccc; /* Add border for each section */
+    box-sizing: border-box;
+}
+
+.showcase-content {
+    width: 50%;
+    padding:20px;
+    box-sizing: border-box;
+    margin-bottom:30px;
+}
+
+.showcase-content h2{
+    font-size: 40px;
+    margin-top:10px;
+}
+
+.showcase-content p{
+    font-size: 25px;
+    font-family: 'lato', 'sans-serif';
+    margin-top:-10px;
+    margin-bottom:40px;
+}
+
+.showcase-image1 {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.showcase-image1 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.showcase-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.read-more-button a{
+    background-color: white; 
+    color: black;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration:none;
+    font-family: 'Saint Regus', 'sans-serif';
+    font-weight: 700;
+}
+
+.read-more-button:hover a{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+.discover-section {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #ccc; /* Add border for each section */
+    box-sizing: border-box;
+}
+
+.discover-content{
+    display: flex;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.discover-button a {
+    background-color: black;
+    color: white;
+    border:2px solid black;
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top:75px;
+    margin-bottom: 80px;
+    margin-right:30px;
+    display:flex;
+}
+
+.discover-button a:hover {
+    background-color:white;
+    color: black;
+    border:2px solid black;
+}
+
+.footer-section{
+    height:50px;
+    width:100%;
+    background-color: black;
+}
+
+.footer-content{
+    font-size: 12px;
+    font-family: 'Arial', 'sansarif';
+    margin-left: 40px;
+    background-color: black;
+    color:white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .container {
+        margin-top: 30px; 
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .read-more-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
